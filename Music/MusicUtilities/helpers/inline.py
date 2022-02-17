@@ -11,8 +11,7 @@ from Music.config import GROUP, CHANNEL
 def play_markup(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="Support​​", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton(text="Menu", callback_data=f"other {videoid}|{user_id}"),
+            InlineKeyboardButton(text="• Menu", callback_data=f"other {videoid}|{user_id}"),
         ],
         [      
                InlineKeyboardButton(text="🗑 Close", callback_data=f"close"),
@@ -30,15 +29,15 @@ def others_markup(videoid, user_id):
             InlineKeyboardButton(text="⏹️", callback_data=f"stopvc2"),
         ],
         [
-            InlineKeyboardButton(text="➕ Add Your List​", callback_data=f'playlist {videoid}|{user_id}'),
-            InlineKeyboardButton(text="➕ Add Group List​", callback_data=f'group_playlist {videoid}|{user_id}'),
+            InlineKeyboardButton(text="Add Your List​", callback_data=f'playlist {videoid}|{user_id}'),
+            InlineKeyboardButton(text="Add Group List​", callback_data=f'group_playlist {videoid}|{user_id}'),
         ],
         [
             InlineKeyboardButton(
-                text="⬇️ Unduh Audio", callback_data=f"gets audio|{videoid}|{user_id}"
+                text="Unduh Audio", callback_data=f"gets audio|{videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="⬇️ Unduh Video", callback_data=f"gets video|{videoid}|{user_id}"
+                text="Unduh Video", callback_data=f"gets video|{videoid}|{user_id}"
             ),
         ],
         [
@@ -201,22 +200,22 @@ confirm_group_keyboard = InlineKeyboardMarkup(
 )
 
 close_keyboard = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("Tutup", callback_data="close2")]]
+    [[InlineKeyboardButton("🗑 Close", callback_data="close2")]]
 )
 
 play_list_keyboard = InlineKeyboardMarkup( 
             [
                 [
                     InlineKeyboardButton(
-                        "➕ User Playlist​", callback_data="P_list"
+                        "User Playlist​", callback_data="P_list"
                     ),
                     InlineKeyboardButton(
-                        "➕ Group Playlist​​", callback_data="G_list"
+                        "Group Playlist​​", callback_data="G_list"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Tutup​", callback_data="close2"
+                        "🗑 Tutup​", callback_data="close2"
                     )
                 ]
             ]
@@ -358,8 +357,8 @@ def private_panel():
 def setting_markup():
     buttons = [
         [
-            InlineKeyboardButton(text="🔈 Audio Quality", callback_data="AQ"),
-            InlineKeyboardButton(text="🎚 Audio Volume", callback_data="AV"),
+            InlineKeyboardButton(text="Audio Quality", callback_data="AQ"),
+            InlineKeyboardButton(text="Audio Volume", callback_data="AV"),
         ],
         [
             InlineKeyboardButton(
@@ -370,7 +369,7 @@ def setting_markup():
             ),
         ],
         [
-            InlineKeyboardButton(text="✖️ Close", callback_data="close"),
+            InlineKeyboardButton(text="🗑 Close", callback_data="close"),
         ],
     ]
     return f"  **{BOT_NAME} Settings**", buttons
@@ -384,16 +383,16 @@ def volmarkup():
             ),
         ],
         [
-            InlineKeyboardButton(text="🔈 Low Vol", callback_data="LV"),
-            InlineKeyboardButton(text="🔉 Medium Vol", callback_data="MV"),
+            InlineKeyboardButton(text="Low Vol", callback_data="LV"),
+            InlineKeyboardButton(text="Medium Vol", callback_data="MV"),
         ],
         [
-            InlineKeyboardButton(text="🔊 High Vol", callback_data="HV"),
-            InlineKeyboardButton(text="🔈 Amplified Vol", callback_data="VAM"),
+            InlineKeyboardButton(text="High Vol", callback_data="HV"),
+            InlineKeyboardButton(text="Amplified Vol", callback_data="VAM"),
         ],
         [
             InlineKeyboardButton(
-                text="🔽 Costume Volume 🔽", callback_data="Custommarkup"
+                text="Costume Volume", callback_data="Custommarkup"
             )
         ],
         [InlineKeyboardButton(text="🔙 Back", callback_data="settingm")],
@@ -415,7 +414,7 @@ def custommarkup():
             InlineKeyboardButton(text="+50", callback_data="PFZ"),
             InlineKeyboardButton(text="-50", callback_data="MFZ"),
         ],
-        [InlineKeyboardButton(text="🔼 Costume Volume 🔼", callback_data="AV")],
+        [InlineKeyboardButton(text="Costume Volume", callback_data="AV")],
     ]
     return f"  **{BOT_NAME} Settings**", buttons
 
